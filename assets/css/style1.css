@@ -1,0 +1,33 @@
+.body{
+    background-color:aliceblue;
+
+}
+
+.h1{
+    color: black;
+
+}
+
+.form{
+    width: auto;
+    margin: auto;
+    border-left-width: 30px;
+    
+    
+
+}
+
+.input,textarea{
+    width:auto;
+    margin: auto;
+
+}
+
+
+.Fuente1{
+    font-size: 60px;
+}
+
+.Fuente2{
+    font-size: 80px;
+}

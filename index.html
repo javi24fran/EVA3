@@ -4,8 +4,43 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style1.css">
+    <script src="assets/js/script.js"></script>
+
 </head>
+<p> Bienvenido a DBS, en nuestra pagina encontraras productos de belleza y cuidado personal</p>
 <body>
+    <button id="btnContraste" type="button" onclick="cambiarContraste()">Contraste</button>
+    <button id ="btnfuente" type="button" onclick="cambiarFuente()">Fuente</button>
+    <form >
+    <h1 id="titulo">Crear cuenta</h1>
+    <label >Nombre</label>
+    <input type="text" name="nombre" placeholder="ingrese su nombre aqui">
+    <label >Apellido</label>
+    <input type="text" name="apellido" placeholder="ingrese su apellido aqui">
+    <label >RUT</label>
+    <input type="text" name="rut" placeholder="ingrese su rut aqui">
+    <label >Fecha de nacimiento</label>
+    <input type="text" name="fechadenacimiento" placeholder="ingrese su fecha de nacimiento aqui">
+    <label >Email</label>
+    <input type="email" name="email" placeholder="ingrese su email aqui">
+    <label >Telefono</label>
+    <input type="tel" name="Telefono" placeholder="ingrese su telefono aqui">
+    <label >Genero</label>
+    <select name="genero" id="genero">
+        <option value="Femenino">Femenino</option>
+        <option value="Masculino">Masculino</option>
+        <option value="Otro">Otro</option>
+    </select>
+    <textarea name="texto" id="texto" >Sobre mi</textarea>
+    <input type="tex" name="texto" placeholder="cuentanos que es lo que mas te gusta de DBS">
+    <label >Aceptar terminos y condiciones</label>
+    <input type="checkbox" name="aceptar">
+    <button id="btnRegistrar" onclick="validar()">Crear cuenta</button>
+    </form>
+
+
+
     
 </body>
 </html>

@@ -10,36 +10,37 @@
 </head>
 <p> Bienvenido a DBS, en nuestra pagina encontraras productos de belleza y cuidado personal</p>
 <body>
-    <button id="btnContraste" type="button" onclick="cambiarContraste()">Contraste</button>
-    <button id ="btnfuente" type="button" onclick="cambiarFuente()">Fuente</button>
-    <form >
-    <h1 id="titulo">Crear cuenta</h1>
-    <label >Nombre</label>
-    <input type="text" name="nombre" placeholder="ingrese su nombre aqui">
-    <label >Apellido</label>
-    <input type="text" name="apellido" placeholder="ingrese su apellido aqui">
-    <label >RUT</label>
-    <input type="text" name="rut" placeholder="ingrese su rut aqui">
-    <label >Fecha de nacimiento</label>
-    <input type="text" name="fechadenacimiento" placeholder="ingrese su fecha de nacimiento aqui">
-    <label >Email</label>
-    <input type="email" name="email" placeholder="ingrese su email aqui">
-    <label >Telefono</label>
-    <input type="tel" name="Telefono" placeholder="ingrese su telefono aqui">
-    <label >Genero</label>
-    <select name="genero" id="genero">
-        <option value="Femenino">Femenino</option>
-        <option value="Masculino">Masculino</option>
-        <option value="Otro">Otro</option>
-    </select>
-    <textarea name="texto" id="texto" >Sobre mi</textarea>
-    <input type="tex" name="texto" placeholder="cuentanos que es lo que mas te gusta de DBS">
-    <label >Aceptar terminos y condiciones</label>
-    <input type="checkbox" name="aceptar">
-    <button id="btnRegistrar" onclick="validar()">Crear cuenta</button>
+    
+    <form id="formulario">
+        <div>
+            <button class="btn" type="button" onclick="cambiarContraste()">Contraste</button>
+            <button class= "btn" type="button" onclick="cambiarFuente()">Fuente</button>
+        </div>
+        <h1 id="titulo">Crear cuenta</h1>
+        <label class="label1">Nombre</label>
+        <input type="text" name="nombre" placeholder="ingrese su nombre aqui">
+        <label class="label1">Apellido</label>
+        <input type="text" name="apellido" placeholder="ingrese su apellido aqui">
+        <label class="label1">RUT</label>
+        <input type="text" name="rut" placeholder="ingrese su rut aqui">
+        <label class="label1">Fecha de nacimiento</label>
+        <input type="text" name="fechadenacimiento" placeholder="ingrese su fecha de nacimiento aqui">
+        <label class="label1">Email</label>
+        <input type="email" name="email" placeholder="ingrese su email aqui">
+        <label class="label1">Telefono</label>
+        <input type="tel" name="Telefono" placeholder="ingrese su telefono aqui">
+        <label class="label1">Genero</label>
+        <select name="genero" id="genero">
+            <option value="Femenino">Femenino</option>
+            <option value="Masculino">Masculino</option>
+            <option value="Otro">Otro</option>
+        </select>
+        <label class="label1">Sobre mí</label>
+        <textarea name="texto" id="texto" placeholder="cuentanos que es lo que mas te gusta de DBS" ></textarea>
+        <label class="label1">Aceptar terminos y condiciones</label>
+        <input type="checkbox" name="aceptar">
+        <button id="btnRegistrar" onclick="validar()">Crear cuenta</button>
     </form>
-
-
 
     
 </body>

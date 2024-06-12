@@ -1,33 +1,50 @@
-.body{
-    background-color:aliceblue;
-
+body{
+    background-color:white;
 }
 
-.h1{
+h1{
     color: black;
+    text-align: center;
 
 }
-
-.form{
-    width: auto;
+form{
+    background-color: rgb(245, 210, 242);
+    width: 50%;
     margin: auto;
-    border-left-width: 30px;
-    
-    
+    border-radius: 25px;
+    padding: 40px;
+}
+
+label{
+
+    display: block;
+    margin-top: 20px;
+
 
 }
 
-.input,textarea{
-    width:auto;
+input{
+    display: block;
+    height: 20px;
+    width:60%;
+}
+
+label,input,textarea,select{
+    margin-left: 120px;
+}
+textarea{
+    display: block;
+    height: 70px;
+    width: 60%;
+}
+.btn{
+    width:20%;
+
+}
+.fuente1{
+    font-size: 70px;
+}
+
+#btnRegistrar {
     margin: auto;
-
-}
-
-
-.Fuente1{
-    font-size: 60px;
-}
-
-.Fuente2{
-    font-size: 80px;
 }

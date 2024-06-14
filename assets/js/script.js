@@ -1,8 +1,12 @@
 import {registrarPersona,obtenerPersonas,actualizarPersona, eliminarPersona} from "./promesas.js";
 window.addEventListener ("load",()=>{
-    document.getElementById("btnRegistrar").addEventListener("click",function(event){
+    document.getElementById("btnRegistrar").addEventListener("click", function (event) {
         event.preventDefault();
+        validar();
+        registrar();
     });
+
+    cargarDatos();
     document.getElementById("btnRegistrar").addEventListener("click",validar);
     document.getElementById("btnRegistrar").addEventListener("click",registrar);
     cargarDatos();
@@ -13,7 +17,7 @@ window.addEventListener ("load",()=>{
     
     
     function validar() {
-        //Validar campos cuando se haga el registro ("Crear cuenta")
+        //Validar campos qeu no esten vacios cuando se haga el registro ("Crear cuenta")
         validarVacio("nombre");
         validarVacio("apellido");
         validarVacio("rut");
@@ -112,7 +116,7 @@ window.addEventListener ("load",()=>{
         let vTelefono= etelefono.value;
         let vGenero= egenero.value;
         let vTexto= etexto.value;
-        let vAceptar= eaceptar;
+        let vAceptar= eaceptar.checked;//devolvera true o false
          //creo un objeto en base al elemento con los datos recuperados
         let objeto = {nombre:vNombre,apellido:vApellido,rut:vRut,fecha:vFecha,email:vEmail,telefono:vTelefono,genero:vGenero,texto:vTexto,aceptar:vAceptar};
     
@@ -150,7 +154,7 @@ window.addEventListener ("load",()=>{
                 estructura +="</tr>";
                 
             })
-            document.getElementById("cuerpoTabla").innerHTML=estructura;
+            document.getElementById("cuerpoTabla").innerHTML=estructura; // Agrega eventos a los botones de actualizar y eliminar
             personas.forEach((p)=>{
                 let elemento = document.getElementById("UPD"+p.id);
                 elemento.addEventListener("click",()=>{
@@ -195,7 +199,6 @@ window.addEventListener ("load",()=>{
         let eTelefono = document.getElementById("UPDtelefono")
         let eGenero = document.getElementById("UPDgenero")
         let eTexto= document.getElementById("UPDtexto")
-        let eAceptar = document.getElementById("UPDaceptar")
         //recupero el valor del elemento
         let vNombre = eNombre.value;
         let vApellido = eApellido.value;
@@ -205,9 +208,8 @@ window.addEventListener ("load",()=>{
         let vTelefono= eTelefono.value;
         let vGenero= eGenero.value;
         let vTexto= eTexto.value;
-        let vAceptar= eAceptar.value;
          //creo un objeto en base al elemento con los datos recuperados
-        let objeto = {nombre:vNombre,apellido:vApellido,rut:vRut,fecha:vFecha,email:vEmail,telefono:vTelefono,genero:vGenero,texto:vTexto,aceptar:vAceptar};
+        let objeto = {nombre:vNombre,apellido:vApellido,rut:vRut,fecha:vFecha,email:vEmail,telefono:vTelefono,genero:vGenero,texto:vTexto};
        //creo un objeto
         console.log(objeto)
         let id = document.getElementById("btnActualizar").value;
@@ -220,7 +222,7 @@ window.addEventListener ("load",()=>{
         }).catch((e)=>{
         console.log(e);
         })
-    }
+    };
     
     function cambiarFuente(){
         var element = document.getElementById("titulo");

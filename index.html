@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script type="module" src="./assests/js/firebase.js"></script>
     <link rel="stylesheet" href="assets/css/style1.css">
-    <script src="assets/js/script.js"></script>
-
+    <script type= "module" src="assets/js/script.js"></script>
 </head>
-<p> Bienvenido a DBS, en nuestra pagina encontraras productos de belleza y cuidado personal</p>
+
 <body> 
+    <p> Bienvenido a DBS, en nuestra pagina encontraras productos de belleza y cuidado personal</p>
     <form id="formulario">
         <div>
-            <button class="btn" type="button" onclick="cambiarContraste()">Contraste</button>
-            <button class= "btn" type="button" onclick="cambiarFuente()">Fuente</button>
+            <button id="btnContraste" class="btn" type="button" onclick="cambiarContraste()">Contraste</button>
+            <button id="btnFuente" class= "btn" type="button" onclick="cambiarFuente()">Fuente</button>
         </div>
         <h1 id="titulo">Crear cuenta</h1>
         <label class="label1">Nombre</label>
@@ -33,7 +34,7 @@
         <p class="noDisplay" id="pemail">Debes ingresar un email</p>
         <label class="label1">Telefono</label>
         <input id="telefono" type="tel" name="Telefono" placeholder="ingrese su telefono aqui">
-        <p class="noDisplay" id="ptelefono">Debes ingresar un telefono</p>
+        <p class="noDisplay" id="ptelefono">Debes ingresar 9 numeros</p>
         <label class="label1">Genero</label>
         <select name="genero" id="genero">
             <option value="Femenino">Femenino</option>
@@ -44,9 +45,28 @@
         <textarea name="texto" id="texto" placeholder="cuentanos que es lo que mas te gusta de DBS" ></textarea>
         <label class="label1">Aceptar terminos y condiciones</label>
         <input id="aceptar" type="checkbox" name="aceptar">
-        <button id="btnRegistrar" onclick="registrar()">Crear cuenta</button>
-    </form>
+        <button id="btnRegistrar" type="button">Crear cuenta</button>
 
+
+        <table id="tabla">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Rut</th>
+                    <th>Fecha</th>
+                    <th>Email</th>
+                    <th>Telefono</th>
+                    <th>Genero</th>
+                    <th>Texto</th>
+                    <th>Aceptar Terminos</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpoTabla">
+    
+            </tbody>
+            </table>
+    
     
 </body>
 </html>
